@@ -1,7 +1,6 @@
 function handleCredentialResponse(response) {
   console.log("Encoded JWT ID token: " + response.credential);
 
-  // Check if response.credential is not empty
   if (response.credential) {
     var expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + 30);
@@ -10,7 +9,9 @@ function handleCredentialResponse(response) {
     var encodedToken = encodeURIComponent(response.credential);
 
     // Format the expires attribute correctly
-    document.cookie = `jwt_token=${encodedToken}; expires=${expirationDate.toUTCString()}; path=/`;
+    document.cookie = `jwt_token=${encodedToken}; max-age=${
+      30 * 24 * 60 * 60
+    }; path=/`;
   }
 }
 
@@ -32,20 +33,25 @@ window.onload = function () {
     var payload = JSON.parse(atob(jwt_token.split(".")[1]));
     var { email, name, picture } = payload;
 
+    console.log("picture");
+
     var rightNav = document.querySelector(".right-nav");
     rightNav.innerHTML += `<div class="logged-in">
-      <div class="profile-picture">
-          <img src="${picture}">
-      </div>
-      <div>
-          <h3 class="signed-in-name">
-              ${name}
-          </h3>
-          <h4 class="signed-in-email">
-              ${email}
-          </h4>
-          </div>
-      </div>`;
+    <div class="profile-picture">
+        <img src="${picture}">
+    </div>
+    <div class="profile-details">
+        <h3 class="signed-in-name">
+            ${name}
+        </h3>
+        <h4 class="signed-in-email">
+            ${email}
+        </h4>
+    </div>
+    <div class="logout">
+        <img src="caretdown.svg">
+    </div>
+    </div>`;
   } else {
     var signInHolder = document.querySelector("#signInHolder");
 
@@ -58,5 +64,6 @@ window.onload = function () {
       document.getElementById("buttonDiv"),
       { theme: "outline", size: "large" } // customization attributes
     );
+    google.accounts.id.prompt(); // also display the One Tap dialog
   }
 };
