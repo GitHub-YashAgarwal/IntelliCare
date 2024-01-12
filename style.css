@@ -117,13 +117,85 @@ nav ul{
 
 .logged-in {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 16px 4px 4px;
+    float: right;
+    margin-right: 25%;
+    background: rgba(8, 18, 37, 0.15);
+    border-radius: 400px;
+    width: 222.97px;
+    height: 38px;
 }
 
-.profile-picture img{
-    height: 35px;
+.profile-picture {
+    margin: 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 400px;
 }
 
+.profile-picture img {
+    width: 41.5px;
+    height: 41.5px;
+    left: -1.5px;
+    top: -2.9px;
+    border-radius: 400px
+}
 
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 12px;
+    gap: 2px;
+
+    margin: 0 auto;
+    width: 154.97px;
+    height: 36px;
+}
+
+.signed-in-name {
+    width: 150px;
+    height: 12px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.signed-in-email {
+    width: 91px;
+    height: 10px;
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.logout {
+    margin: 0 auto;
+    width: 12px;
+    height: 12px;
+}
+
+.logout img {
+    position: absolute;
+    left: 15.62%;
+    right: 15.62%;
+    top: 34.38%;
+    bottom: 28.12%;
+}
 
 .hamburger{
     flex-direction: column;
@@ -231,7 +303,7 @@ nav ul{
 
 .signinWrapper{
     display: flex;
-    width: 31vw;
+    width: 32vw;
     justify-content: space-evenly;
     margin: 0 auto;
     padding-top: 6vh;
@@ -242,11 +314,13 @@ nav ul{
     align-items: center;
     justify-content: center;
     min-width: 205px;
-    background-color: #F8FAFF;
+    background: linear-gradient(180deg, #245FFF 0%, rgba(36, 95, 255, 0.88) 100%);
     height: 100%;
+    width: 15vw;
     border-radius: 4px;
     border: 0;
     cursor: pointer;
-    color: black;
-    font-weight: 500;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 14px;
 }
