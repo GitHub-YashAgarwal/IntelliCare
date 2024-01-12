@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+    <title>Intellicare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <div class="main">
+        <div class="bg-gradient prevent-select">
+        </div>
+        <div class="bg-circles-head prevent-select">
+            <img class="bg-circles" src="bg-circles.svg">
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="left-nav">
+            <div class="logo">
+                <img src="logo.png" alt="IntelliCare" />
+            </div>
+            <div class="logo-name">
+                IntelliCare
+            </div>
+            <ul class="nav-elements" id="nav">
+                <li>
+                    <a style="animation-delay: 0.2s;" href="#overview">Overview</a>
+                </li>
+                <li>
+                    <a style="animation-delay: 0.3s;" href="#solution">Solution</a>
+                </li>
+                <li>
+                    <a style="animation-delay: 0.4s;" href="#plans">Plans</a>
+                </li>
+                <li>
+                    <a style="animation-delay: 0.5s;" href="#referrals">Referrals</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-nav">
+
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div class="section-2 prevent-select">
+        <div class="text-heading-1">
+            Explore Modern<br>Health Plans with
+        </div>
+        <div class="text-heading-2">
+            AI Solutions
+        </div>
+        <div class="text-subheading-1">
+            Use AI to find and manage the best health coverage for your business needs and budget.
+        </div>
+        <div id="signInHolder">
+            <div class="signinWrapper">
+                <div>
+                    <button class="createaccount"><img style="padding-right: 0.5vw;" width="20" height="20"
+                            src="https://img.icons8.com/fluency-systems-regular/96/000000/guest-male.png"
+                            alt="guest-male" />Create your Account</button>
+                </div>
+                <div id="g_id_onload"
+                    data-client_id="628266741208-kbm8u6kjl1geuacmd3igugl9vqdtfhdg.apps.googleusercontent.com"
+                    data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                    data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
