@@ -43,6 +43,8 @@ window.onload = function () {
       var { email, name, picture } = payload;
     }
 
+    console.log("picture");
+
     var rightNav = document.querySelector(".right-nav");
     rightNav.innerHTML += `<div class="logged-in">
     <div class="profile-picture">
