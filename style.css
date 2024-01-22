@@ -117,13 +117,130 @@ nav ul{
 
 .logged-in {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 16px 4px 4px;
+    float: right;
+    margin-right: 25%;
+    background: rgba(8, 18, 37, 0.15);
+    border-radius: 400px;
+    width: 222.97px;
+    height: 38px;
 }
 
-.profile-picture img{
-    height: 35px;
+.profile-picture {
+    margin: 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 400px;
 }
 
+.profile-picture img {
+    width: 41.5px;
+    height: 41.5px;
+    left: -1.5px;
+    top: -2.9px;
+    border-radius: 400px
+}
 
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 12px;
+    gap: 2px;
+
+    margin: 0 auto;
+    width: 154.97px;
+    height: 36px;
+}
+
+.signed-in-name {
+    width: 150px;
+    height: 12px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.signed-in-email {
+    width: 91px;
+    height: 10px;
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.logout {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.dropbtn {
+    position: absolute;
+    left: 15.62%;
+    right: 15.62%;
+    top: 34.38%;
+    bottom: 28.12%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logout img {
+    position: absolute;
+    left: 15.62%;
+    right: 15.62%;
+    top: 34.38%;
+    bottom: 28.12%;
+}
+
+.logout-dropdown {
+    display: none;
+    z-index: 2;
+}
+
+.logout h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;    
+}
+
+.logged-out-btn {
+    padding: 4px 16px 4px 4px;
+    float: right;
+    margin-right: -130%;
+    /* margin-top: 15px; */
+    background: #FFF;
+    border-radius: 400px;
+    width: 222.97px;
+    height: 38px;
+    top: 29px;
+    color: black;
+}
+
+.logout-dropdown.show {
+    display: block;
+  }
+  
 
 .hamburger{
     flex-direction: column;
@@ -231,22 +348,179 @@ nav ul{
 
 .signinWrapper{
     display: flex;
-    width: 31vw;
+    width: 32vw;
     justify-content: space-evenly;
     margin: 0 auto;
     padding-top: 6vh;
 }
 
-.createaccount {
+.account {
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+}
+
+.createaccount-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 205px;
-    background-color: #F8FAFF;
-    height: 100%;
+    min-width: 195px;
+    background: #fff;
+    height: 7.5vh;
+    width: 13vw;
     border-radius: 4px;
     border: 0;
     cursor: pointer;
-    color: black;
+    color: #245FFF;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 12px;
+}
+.loginaccount-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 195px;
+    background: linear-gradient(180deg, #245FFF 0%, rgba(36, 95, 255, 0.88) 100%);
+    height: 7.5vh;
+    width: 13vw;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 12px;
+}
+
+#createAccountForm {
+    display: none;
+}
+#loginAccountForm {
+    display: none;
+}
+
+.createaccount-main {
+    position: fixed;
+    width: 450px;
+    height: 436px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0);
+    background: transparent;
+    border: 1px solid rgba(105, 126, 225, .5);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.loginaccount-main {
+    position: fixed;
+    width: 450px;
+    height: 415px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0);
+    background: transparent;
+    border: 1px solid rgba(105, 126, 225, .5);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.createaccount {
+    width: 100%;
+    padding: 40px;
+}
+
+.createaccount .icon-close {
+    position: absolute;
+    top: 0px;
+    right: -2px;
+    width: 45px;
+    height: 45px;
+    background-color: #245FFF;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+
+.createaccount-heading h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1.75px solid dimgray;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
     font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 3px;
+}
+
+.input-box input {
+    width: 88%;
+    height: 75%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 0 0 5px;
+    margin-top: 10px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 45px;
+    background-color: #245FFF;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: #FFF;
+}
+
+#buttonDiv {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
     <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <title>Intellicare</title>
+    <title>Intellicare | Modern Health Plans with AI Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png">
 </head>
 
 <body>
     <script src="https://accounts.google.com/gsi/client" async></script>
+
     <div class="main">
         <div class="bg-gradient prevent-select">
         </div>
@@ -20,7 +21,7 @@
             <img class="bg-circles" src="bg-circles.svg">
         </div>
     </div>
-    <nav class="navbar">
+    <nav class="navbar prevent-select">
         <div class="left-nav">
             <div class="logo">
                 <img src="logo.png" alt="IntelliCare" />
@@ -43,8 +44,7 @@
                 </li>
             </ul>
         </div>
-        <div class="right-nav">
-
+        <div class="right-nav"></div>
         </div>
 
         <div class="hamburger" onclick="toggleMenu()">
@@ -63,25 +63,14 @@
         <div class="text-subheading-1">
             Use AI to find and manage the best health coverage for your business needs and budget.
         </div>
-        <div id="signInHolder">
-            <div class="signinWrapper">
-                <div>
-                    <button class="createaccount"><img style="padding-right: 0.5vw;" width="20" height="20"
-                            src="https://img.icons8.com/fluency-systems-regular/96/000000/guest-male.png"
-                            alt="guest-male" />Create your Account</button>
-                </div>
-                <div id="g_id_onload"
-                    data-client_id="628266741208-kbm8u6kjl1geuacmd3igugl9vqdtfhdg.apps.googleusercontent.com"
-                    data-auto_prompt="false">
-                </div>
-                <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
-                    data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
-                </div>
-            </div>
-        </div>
+        <div class="signinWrapper"></div>
     </div>
-    </div>
+    <form id="createAccountForm" method="post" action="http://localhost:5000/signup"></form>
+    <form id="loginAccountForm" method="post" action="http://localhost:5000/login"></form>
     <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
